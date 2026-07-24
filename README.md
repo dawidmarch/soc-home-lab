@@ -131,6 +131,7 @@ W celu zidentyfikowania aktywnych usług na maszynie ofiary (`10.0.2.4`) bez ust
     ```
 
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Discovery ([TA0007](https://attack.mitre.org/tactics/TA0007/)) $\rightarrow$ **Technika:** Network Service Discovery ([T1046](https://attack.mitre.org/techniques/T1046/))
 
 ### 3. Detekcja i analiza ruchu sieciowego
@@ -151,6 +152,7 @@ Filtrowanie ruchu za pomocą reguły `ip.addr == 10.0.2.4 and tcp` ujawniło pow
 ## Case Study 5: Ingress Tool Transfer & LOLBins (Certutil)
 
 ### 1. Przebieg ataku
+
 Celem tego ataku była symulacja pobrania złośliwego pliku (payloadu) z serwera kontrolowanego przez atakującego na maszynę ofiary. Aby uniknąć wykrycia przez proste mechanizmy monitorujące ruch z przeglądarek internetowych, wykorzystałem zaufane narzędzie administracyjne Windows – `certutil.exe`. Narzędzie to domyślnie służy do zarządzania certyfikatami, jednak posiada wbudowaną funkcję pobierania plików z sieci, co adwersarze często wykorzystują. 
 
 * **Przygotowanie serwera na Kali Linux (10.0.2.5):**
@@ -167,6 +169,7 @@ Celem tego ataku była symulacja pobrania złośliwego pliku (payloadu) z serwer
     ```
 
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Command and Control ([TA0011](https://attack.mitre.org/tactics/TA0011/)) $\rightarrow$ **Technika:** Ingress Tool Transfer ([T1105](https://attack.mitre.org/techniques/T1105/))
 * **Taktyka:** Defense Evasion ([TA0005](https://attack.mitre.org/tactics/TA0005/)) $\rightarrow$ **Technika:** System Binary Proxy Execution ([T1218](https://attack.mitre.org/techniques/T1218/))
 
