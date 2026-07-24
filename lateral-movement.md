@@ -32,7 +32,7 @@ Wykorzystałem narzędzie `impacket-wmiexec` do zdalnego wykonania kodu na hośc
 Po wykonaniu ataku, przeprowadziłem analizę logów w platformie Wazuh. Zidentyfikowałem zdarzenie `Event ID 1` (Process Create), które jest kluczowe dla wykrycia tego ataku.
 
 ### Znalezione dowody
-Analiza pliku JSON z logu `whoami.exe` (zgodnie z załączonym **image_be7d42.jpg**) wykazała następujące parametry:
+Analiza pliku JSON z logu `whoami.exe`  wykazała następujące parametry:
 - **Proces:** `whoami.exe`
 - **Rodzic (ParentImage):** `C:\Windows\System32\cmd.exe`
 - **ParentCommandLine:** `cmd.exe /Q /c whoami 1> \\127.0.0.1\ADMIN$\__1782736377.295496 2>&1`
