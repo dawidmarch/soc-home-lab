@@ -92,6 +92,7 @@ Podczas testów napotkałem mechanizm ochronny Windows Defender (AMSI), który b
 ## Case Study 3: Scheduled Task Persistence & Execution Detection
 
 ### 1. Przebieg ataku 
+
 To zadanie stanowi bezpośrednią kontynuację działań poeksploatacyjnych. Wykorzystując aktywną sesję Reverse Shell na maszynie Kali Linux (`10.0.2.5`), przesłałem zdalnie do przejętego systemu Windows (`10.0.2.4`) komendę tworzącą złośliwy wpis w Harmonogramie Zadań. Celem adwersarza było zapewnienie stałego, ukrytego powrotu do systemu (Persistence) z najwyższymi uprawnieniami.
 
 * **Zdalna egzekucja z poziomu Kali Linux (wewnątrz aktywnej sesji hakerskiej):**
@@ -100,11 +101,13 @@ To zadanie stanowi bezpośrednią kontynuację działań poeksploatacyjnych. Wyk
     ```
     
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Persistence ([TA0003](https://attack.mitre.org/tactics/TA0003/)) $\rightarrow$ **Technika:** Scheduled Task/Job: Scheduled Task ([T1053.005](https://attack.mitre.org/techniques/T1053/005/))
 
 ### 3. Detekcja i analiza logów 
 
 #### Logi systemowe: Sysmon Event ID 1 
+
 Użycie natywnych narzędzi administracyjnych Windows (techniki *Living off the Land*) często omija podstawowe reguły antywirusowe. Podczas analizy w środowisku SIEM, samo utworzenie zadania przez administratora nie wywołało domyślnego alertu o wysokim priorytecie. Kluczowy moment detekcji nastąpił jednak w fazie egzekucji (Execution), gdy usługa systemowa podjęła próbę uruchomienia zdefiniowanego skryptu.
 
 Sensor Sysmon zarejestrował zdarzenie jako utworzenie nowego procesu przez system (Event ID 1) z następującą telemetrią:
