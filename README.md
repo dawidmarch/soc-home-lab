@@ -7,7 +7,7 @@ Projekt stworzyłem w celu praktycznego przetestowania mechanizmów detekcji zag
 * **System operacyjny hosta:** Windows 10 Pro (64-bit)
 * **Procesor (CPU):** Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz
 * **Pamięć RAM:** 32,0 GB
-* **Dysk:** SSD Patriot P210 512G
+* **Dysk:** SSD Patriot P210 512GB
 
 ## Software Stack
 
