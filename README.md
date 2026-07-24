@@ -38,6 +38,7 @@ Z poziomu maszyny Kali Linux przeprowadziłem szybkie skanowanie portów w poszu
     ```
 
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Reconnaissance ([TA0043](https://attack.mitre.org/tactics/TA0043/)) $\rightarrow$ **Technika:** Active Scanning ([T1595](https://attack.mitre.org/techniques/T1595/))
 * **Taktyka:** Credential Access ([TA0006](https://attack.mitre.org/tactics/TA0006/)) $\rightarrow$ **Technika:** Brute Force ([T1110](https://attack.mitre.org/techniques/T1110/))
 
@@ -63,6 +64,7 @@ Filtrowanie protokołu `smb` wykazało sekwencję pakietów negocjacji sesji, kt
 ## Case Study 2: PowerShell Reverse Shell & Execution Detection
 
 ### 1. Przebieg ataku 
+
 W celu zsymulowania fazy poeksploatacyjnej (Post-Exploitation), na maszynie ofiary uruchomiłem skrypt mapujący surowe gniazdo TCP z powrotem do maszyny atakującego, co pozwala na zdalne wykonywanie komend w systemie operacyjnym (Reverse Shell).
 
 * **Nasłuch na Kali (Netcat):**
@@ -73,6 +75,7 @@ W celu zsymulowania fazy poeksploatacyjnej (Post-Exploitation), na maszynie ofia
     Wykorzystałem jednolinijkowy skrypt PowerShell tworzący obiekt `System.Net.Sockets.TCPClient` kierujący ruch na adres `10.0.2.5:4444`.
 
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Execution ([TA0002](https://attack.mitre.org/tactics/TA0002/)) $\rightarrow$ **Technika:** Command and Scripting Interpreter: PowerShell ([T1059.001](https://attack.mitre.org/techniques/T1059/001/))
 * **Taktyka:** Command and Control ([TA0011](https://attack.mitre.org/tactics/TA0011/)) $\rightarrow$ **Technika:** Application Layer Protocol ([T1071](https://attack.mitre.org/techniques/T1071/))
 
