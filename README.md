@@ -137,6 +137,7 @@ W celu zidentyfikowania aktywnych usług na maszynie ofiary (`10.0.2.4`) bez ust
 ### 3. Detekcja i analiza ruchu sieciowego
 
 #### Analiza pakietów: Wireshark PCAP
+
 Podczas gdy tradycyjne logi systemu hosta rzadko odnotowują niedokończone próby połączeń na warstwie aplikacji, analiza surowego ruchu sieciowego w Wiresharku pozwoliła na natychmiastowe zidentyfikowanie anomalii behawioralnej w protokole TCP.
 
 Filtrowanie ruchu za pomocą reguły `ip.addr == 10.0.2.4 and tcp` ujawniło powtarzający się, nienaturalny wzorzec komunikacji dla badanych portów (np. portu 445):
@@ -176,6 +177,7 @@ Celem tego ataku była symulacja pobrania złośliwego pliku (payloadu) z serwer
 ### 3. Detekcja i analiza logów
 
 #### Logi systemowe: Sysmon Event ID 1 (Process Creation)
+
 Agent Wazuh bezbłędnie wychwycił anomalię związaną z użyciem narzędzia `certutil.exe`. Analiza szczegółów logu w systemie SIEM ujawniła argumenty wiersza poleceń, które jednoznacznie wskazują na intencję pobrania pliku z zewnętrznego źródła.
 
 * **Image:** `C:\Windows\System32\certutil.exe`
@@ -196,6 +198,7 @@ Kluczowym znaleziskiem w warstwie aplikacji (nagłówki HTTP) było pole `User-A
 ## Case Study 6: Malicious Dropper
 
 ### 1. Przebieg ataku
+
 Ten scenariusz odwzorowuje jedno z najczęstszych zdarzeń obsługiwanych przez analityków SOC pierwszej linii. Symulacja polegała na wykonaniu przez użytkownika złośliwego załącznika z wiadomości phishingowej (pliku typu `.bat` ucharakteryzowanego na fakturę), który w tle cicho uruchamia interpreter PowerShell w celu pobrania i zapisania docelowego złośliwego oprogramowania z serwera C2 kontrolowanego przez atakującego.
 
 * **Nasłuch na serwerze C2 (Kali Linux - 10.0.2.5):**
@@ -212,6 +215,7 @@ Ten scenariusz odwzorowuje jedno z najczęstszych zdarzeń obsługiwanych przez 
   Z perspektywy użytkownika po kliknięciu pliku pojawiło się jedynie błyskawiczne mignięcie czarnego okna konsoli.
 
 ### 2. Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Initial Access ([TA0001](https://attack.mitre.org/tactics/TA0001/)) $\rightarrow$ **Technika:** Phishing: Spearphishing Attachment ([T1566.001](https://attack.mitre.org/techniques/T1566/001/))
 * **Taktyka:** Execution ([TA0002](https://attack.mitre.org/tactics/TA0002/)) $\rightarrow$ **Technika:** Command and Scripting Interpreter: PowerShell ([T1059.001](https://attack.mitre.org/techniques/T1059/001/))
 
