@@ -34,7 +34,7 @@ Uruchomienie komendy systemowej przez HTTP.
 
   <img width="718" height="293" alt="curl" src="https://github.com/user-attachments/assets/e0b2b8cc-da72-45a8-be5f-e56c79d19ae0" />
 
-## 4. Analiza logów (Wazuh/Sysmon)
+## 4. Analiza logów 
 Po ataku, system Wazuh rejestruje zdarzenie utworzenia procesu (Sysmon Event ID 1). W analizie JSON należy skupić się na polach:
 
 * **`win.eventdata.image`**: `C:\Windows\System32\cmd.exe`.
