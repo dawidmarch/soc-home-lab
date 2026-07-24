@@ -50,7 +50,7 @@ Z perspektywy analityka, kluczową obserwacją jest **łańcuch procesów (Paren
 * **Zagrożenie:** Jeśli nie wykryjemy `cmd.exe` na wczesnym etapie, atakujący może przejść do fazy eskalacji uprawnień lub pobrania dodatkowego malware.
 * **Detekcja:** Monitoring samego pliku `shell.php` jest niewystarczający; skuteczna detekcja opiera się na analizie zachowania procesów potomnych.
 
-## 6. Rekomendacja (Reguła detekcji w XML)
+## 6. Rekomendacja
 Poniższa reguła dla Wazuh Manager wykrywa nieautoryzowane wywołanie interpretera poleceń przez proces Apache.
 
 ```xml
