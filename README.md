@@ -222,6 +222,7 @@ Ten scenariusz odwzorowuje jedno z najczęstszych zdarzeń obsługiwanych przez 
 ### 3. Detekcja i analiza logów 
 
 #### Logi systemowe: Sysmon Event ID 1 (Process Creation)
+
 Podczas wstępnego triagu alertu (Initial Triage), kluczowe było przeanalizowanie **Drzewa Procesów (Process Tree)**, aby zrozumieć, co dokładnie zainicjowało zdarzenie. Agent Wazuh przesłał telemetrię z Sysmona, z której wyciągnąłem następujące Wskaźniki Kompromitacji (IoC):
 
 * **ParentImage (Proces nadrzędny):** `C:\Windows\System32\cmd.exe` (Wskazuje to na fakt, że PowerShell nie został uruchomiony bezpośrednio z menu Start przez użytkownika, lecz został wywołany z poziomu skryptu wykonawczego).
@@ -235,6 +236,7 @@ Podczas wstępnego triagu alertu (Initial Triage), kluczowe było przeanalizowan
 ## Case Study 7: Credential Access (Brute Force Attack)
 
 ### 1. Przebieg ataku
+
 Drugim z najczęstszych zadań analityka SOC jest monitorowanie i klasyfikowanie alertów związanych z uwierzytelnianiem. W tej symulacji odtworzyłem scenariusz, w którym złośliwy aktor przeprowadza atak siłowy (Brute Force / Dictionary Attack) na usługę logowania (SMB) systemu Windows w celu uzyskania początkowego dostępu.
 
 * **Atak (Kali Linux - 10.0.2.5):**
