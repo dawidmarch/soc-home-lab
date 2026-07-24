@@ -1,4 +1,4 @@
-# Case Study: Analiza wycieku poświadczeń w niezaszyfrowanym ruchu sieciowym (FTP)
+# Case Study: Analiza wycieku poświadczeń w niezaszyfrowanym ruchu sieciowym 
 
 ## 1. Cel mojego projektu
 Celem mojego projektu było przeprowadzenie symulacji ataku typu **Credential Sniffing** w izolowanym środowisku laboratoryjnym (Oracle VirtualBox). Eksperyment miał na celu zademonstrowanie przeze mnie podatności przestarzałych protokołów sieciowych (FTP) na podsłuch oraz praktyczne wykorzystanie przeze mnie narzędzi `tcpdump` oraz `Wireshark` do analizy ruchu sieciowego i ekstrakcji danych przesyłanych w otwartym tekście.
