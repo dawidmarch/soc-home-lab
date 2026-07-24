@@ -1,7 +1,7 @@
 # Case Study: Wykrywanie RCE (Remote Code Execution) poprzez XAMPP
 
 ## 1. Cel projektu
-Celem projektu jest symulacja ataku typu Remote Code Execution (RCE) na serwerze XAMPP zainstalowanym na systemie Windows 10. Projekt ma na celu zweryfikowanie skuteczności monitorowania procesów potomnych serwera WWW (Apache) za pomocą Sysmon i ich analizę w systemie Wazuh.
+Celem projektu jest symulacja ataku typu Remote Code Execution na serwerze XAMPP zainstalowanym na systemie Windows 10. Projekt ma na celu zweryfikowanie skuteczności monitorowania procesów potomnych serwera WWW (Apache) za pomocą Sysmon i ich analizę w systemie Wazuh.
 
 ## 2. MITRE ATT&CK Mapowanie
 
