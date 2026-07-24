@@ -245,6 +245,7 @@ Drugim z najczęstszych zadań analityka SOC jest monitorowanie i klasyfikowanie
   for p in $(cat passwords.txt); do smbclient -L //10.0.2.4 -U "user%$p"; done
 
 ### 2.Mapowanie do MITRE ATT&CK
+
 * **Taktyka:** Credential Access ([TA0006](https://attack.mitre.org/tactics/TA0006/)) -> **Technika:** Brute Force: Password Guessing ([T1110.001](https://attack.mitre.org/techniques/T1110/001/))
 * **Taktyka:** Initial Access ([TA0001](https://attack.mitre.org/tactics/TA0001/)) -> **Technika:** Valid Accounts: Local Accounts ([T1078.003](https://attack.mitre.org/techniques/T1078/003/))
 
@@ -262,6 +263,7 @@ W ramach wstępnego triagu alertów z systemu Wazuh SIEM przeanalizowałem zdarz
 <img width="905" height="819" alt="VENT" src="https://github.com/user-attachments/assets/a6015101-7066-4a51-962b-e561d342a020" />
 
 *Wnioski z analizy:* Obecność zdarzenia 4624 w następstwie logów 4625 stanowi bezwzględne potwierdzenie skutecznego przełamania hasła (True Positive). Procedura reakcji L1 wymaga:
+
 1. Izolacji sieciowej hosta.
 2. Zablokowania adresu IP `10.0.2.5` na zaporze brzegowej.
 3. Eskalacji incydentu, wymuszenia rotacji haseł oraz przeglądu aktywności użytkownika.
