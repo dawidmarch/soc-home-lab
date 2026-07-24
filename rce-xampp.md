@@ -47,7 +47,7 @@ Po ataku, system Wazuh rejestruje zdarzenie utworzenia procesu (Sysmon Event ID 
 ## 5. Wnioski techniczne 
 Z perspektywy analityka, kluczową obserwacją jest **łańcuch procesów (Parent-Child process lineage)**. 
 * Serwer Apache działa jako usługa systemowa. Jeśli proces potomny wykazuje cechy interaktywnego shella, mamy do czynienia z naruszeniem integralności aplikacji.
-* **Zagrożenie:** Jeśli nie wykryjemy `cmd.exe` na wczesnym etapie, atakujący może przejść do fazy eskalacji uprawnień lub pobrania dodatkowego malware (np. Cobalt Strike beacon).
+* **Zagrożenie:** Jeśli nie wykryjemy `cmd.exe` na wczesnym etapie, atakujący może przejść do fazy eskalacji uprawnień lub pobrania dodatkowego malware.
 * **Detekcja:** Monitoring samego pliku `shell.php` jest niewystarczający; skuteczna detekcja opiera się na analizie zachowania procesów potomnych.
 
 ## 6. Rekomendacja (Reguła detekcji w XML)
