@@ -2,7 +2,7 @@
 
 Projekt stworzyłem w celu praktycznego przetestowania mechanizmów detekcji zagrożeń w odizolowanym środowisku sieciowym. Skupiłem się na analizie telemetrii systemowej, korelacji logów w systemie SIEM oraz inspekcji surowych pakietów sieciowych. Całość opiera się na symulacji realnych technik hakerskich i mapowaniu ich do matrycy MITRE ATT&CK.
 
-## Hardware & Host OS
+## Hardware & Host O
 
 * **System operacyjny hosta:** Windows 10 Pro (64-bit)
 * **Procesor (CPU):** Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz
