@@ -1,4 +1,4 @@
-# Home SOC Lab - Threat Detection & Log Analysis 1112223333444555
+# Home SOC Lab - Threat Detection & Log Analysis 11122233334445555
 
 Projekt stworzyłem w celu praktycznego przetestowania mechanizmów detekcji zagrożeń w odizolowanym środowisku sieciowym. Skupiłem się na analizie telemetrii systemowej, korelacji logów w systemie SIEM oraz inspekcji surowych pakietów sieciowych. Całość opiera się na symulacji realnych technik hakerskich i mapowaniu ich do matrycy MITRE ATT&CK.
 
