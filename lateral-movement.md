@@ -1,4 +1,4 @@
-# Case Study: Lateral Movement Detection (WMIExec) 111111
+# Case Study: Lateral Movement Detection (WMIExec) 1111111
 
 ## 1. Cel projektu
 Demonstracja techniki Lateral Movement z wykorzystaniem WMI (Windows Management Instrumentation) oraz jej wykrywanie za pomocą SIEM (Wazuh) i Sysmon.
