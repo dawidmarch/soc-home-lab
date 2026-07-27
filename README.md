@@ -9,7 +9,7 @@ Projekt stworzyłem w celu praktycznego przetestowania mechanizmów detekcji zag
 * **Pamięć RAM:** 32,0 GB
 * **Dysk:** SSD Patriot P210 512GB
 
-## Software Stack
+## Software Stac
 
 * **Hiperwzorzec:** Oracle VirtualBox (wersja 7.2.10) – posłużył do stworzenia izolowanej sieci typu Host-Only (`10.0.2.0/24`), całkowicie bezpiecznej dla systemu operacyjnego hosta.
 * **SIEM / XDR:** Wazuh Manager (Virtual Appliance oparty na Ubuntu) – `10.0.2.3` (Centralny punkt zbierania i analizy logów).
