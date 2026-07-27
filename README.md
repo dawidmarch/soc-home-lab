@@ -9,7 +9,7 @@ Projekt stworzyłem w celu praktycznego przetestowania mechanizmów detekcji zag
 * **Pamięć RAM:** 32,0 GB
 * **Dysk:** SSD Patriot P210 512GB
 
-## Software Stack
+## Software Stac
 
 * **Hiperwzorzec:** Oracle VirtualBox (wersja 7.2.10) – posłużył do stworzenia izolowanej sieci typu Host-Only (`10.0.2.0/24`), całkowicie bezpiecznej dla systemu operacyjnego hosta.
 * **SIEM / XDR:** Wazuh Manager (Virtual Appliance oparty na Ubuntu) – `10.0.2.3` (Centralny punkt zbierania i analizy logów).
@@ -25,7 +25,7 @@ Obecnie, w celu zachowania przejrzystości projektu i ułatwienia nawigacji, pro
 
 ## Case Study 1: SMB Reconnaissance & Brute-Force
 
-### 1. Przebieg ataku 
+### 1. Przebieg ataku
 Z poziomu maszyny Kali Linux przeprowadziłem szybkie skanowanie portów w poszukiwaniu otwartych usług, a następnie uruchomiłem próbę automatycznego logowania (brute-force) do usługi SMB na maszynie z systemem Windows, celując w lokalne konto Administratora.
 
 * **Skanowanie portów (Nmap):**
